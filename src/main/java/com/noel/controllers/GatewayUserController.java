@@ -18,7 +18,7 @@ public class GatewayUserController {
     }
 
     @GetMapping
-    public List<User> getAll() {
+    public User[] getAll() {
         return userProxy.getAllUsers();
     }
 

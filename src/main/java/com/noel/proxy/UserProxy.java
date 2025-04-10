@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Map;
 
 // This is a class that transmits all http requests from the user to user service
 @Component
@@ -19,14 +20,15 @@ public class UserProxy {
     }
 
     public User create(User user) {
-        return null;
+        System.out.println((url + "users"));
+        return restTemplate.postForObject(url + "users", user, User.class);
     }
 
-    public List<User> getAllUsers() {
-        return null;
+    public User[] getAllUsers() {
+        return restTemplate.getForObject(url + "users", User[].class);
     }
 
     public User getUser(String userId) {
-        return null;
+        return restTemplate.getForObject(url + "users/{userId}", User.class, Map.of("userId", userId));
     }
 }
