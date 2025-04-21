@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+
 
 @RestController
 @RequestMapping("v1/users")
