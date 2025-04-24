@@ -36,3 +36,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.bootJar
+		{
+			archiveFileName = "rental-gateway-service.jar"
+		}
